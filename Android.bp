@@ -2,13 +2,16 @@ android_app_import {
     name: "ViPER4AndroidFX",
     owner: "ViperFX",
     apk: "system-ext/app/ViPER4AndroidFX/ViPER4AndroidFX.apk",
-    preprocessed: true,
     presigned: true,
     dex_preopt: {
         enabled: false,
     },
     overrides: ["AudioFX", "MusicFX"],
     system_ext_specific: true,
+    target: {
+        min_sdk_version: "34",
+        preprocessed: true,
+    },
 }
 
 cc_prebuilt_library_shared {
